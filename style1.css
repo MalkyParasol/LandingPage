@@ -1,0 +1,25 @@
+body{
+    direction: rtl;
+    font-family: Google Sans, Helvetica Neue, sans-serif;
+    text-align: center;
+    width: 70%;
+  margin: 0 auto;
+}
+#rotating-headers{
+text-align: center;
+}
+#text{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.red{
+color: red;
+}
+ul{
+    text-align:right !important;
+}
+#btn{
+    cursor: pointer;
+}
