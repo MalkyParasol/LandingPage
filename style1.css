@@ -1,13 +1,37 @@
 body{
     direction: rtl;
-    font-family: Google Sans, Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-family: Verdana, "Helvetica Neue", Helvetica, "Franklin Gothic Medium", "Times New Roman", Times, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
     text-align: center;
     width: 70%;
-  margin: 0 auto;
-  font-size: larger;
+    margin: 0 auto;
+    font-size: larger;
 }
 #rotating-headers{
-text-align: center;
+  text-align: center;
+  background-color: #ec2927;
+  color: #ffffff;
+  padding-top: 2px;
+  
+}
+#rotating-headers> h2{
+  margin-bottom: 0px !important;
+  font-weight: 400;
+}
+#static-header{
+  background-color: #0c143c;
+  color: #ffffff;
+  font-size: 170%;
+}
+#static-header> h1{
+  margin-top: 0px !important;
 }
 #text{
 display: flex;
@@ -19,8 +43,8 @@ flex-direction: column;
 color: red;
 }
 ul{
-    text-align:right !important;
+  text-align:right !important;
 }
 #btn{
-    cursor: pointer;
+  cursor: pointer;
 }
