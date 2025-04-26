@@ -9,11 +9,81 @@ body{
   background-color: #ffffff;
   margin: 0;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
   width: 90%;
   margin: 0 auto;
   font-size: larger;
 }
+h1{
+  text-align: center;
+}
+p{
+  margin-bottom: 0px;
+  margin-top:0px ;
+}
+.circle-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid #0b1542; /* כחול כהה */
+  background: white;
+  color: #e53935; /* אדום */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* שיהיה גם ירידת שורות במסכים קטנים */
+  justify-content: center; /* מרכז את כל הכפתורים */
+  gap: 20px; /* רווח בין כפתור לכפתור */
+  margin-top: 20px;
+}
+.circle-button::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border: 6px solid #e53935; /* אדום פנימי */
+  border-radius: 50%;
+  /* box-sizing: border-box; */
+}
+.big-blue{
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.red-button {
+  display: inline-block;
+  background-color: #EF2D27; /* אדום */
+  color: white; /* צבע הטקסט */
+  font-size: 35px; /* גודל פונט */
+  font-weight: bold; /* מודגש */
+  text-decoration: none; /* בלי קו מתחת */
+  padding: 5px 10px; 
+  border-radius: 40px; /* עיגול פינות גדול */
+  text-align: center;
+  width:max-content;
+  margin: 30px;
+  /* cursor: pointer; */
+ 
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; /* ממקם את הכפתור במרכז אופקית */
+  
+  
+}
+
 #header{
   width: 80%;
   margin: 0 auto;
@@ -48,9 +118,97 @@ flex-direction: column;
 
 .red{
 color: red;
+margin-top: 0px;
+margin-bottom: 0px;
 }
+.red2{
+  font-weight: bold;
+  color: red;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
 ul{
 text-align:right !important;
+list-style-type: none; /* מסיר את הנקודות */
+padding-left: 0; /* מסיר את הרווח השמאלי */
+}
+ul li {
+  position: relative;
+  padding-right: 25px; /* מרווח לצורך המעוין */
+  font-size: 16px;
+  /* display: inline-block; */
+}
+
+ul li::before {
+  content: ''; /* ללא תוכן טקסטואלי */
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 0;
+  height: 0;
+  /* transform: translateY(-50%);  */
+  border-left: 5px solid transparent; /* יצירת הצלעות */
+  border-right: 5px solid transparent;
+  border-top: 10px solid black; 
+  /* border-bottom: 10px solid ; הקודקוד של המעוין */
+ 
+}
+
+.quote-box {
+ 
+  display: flex;
+  border: 2px solid #0b1542; /* כחול כהה */
+  direction: rtl;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px; */
+  margin: 20px;
+  /* width: 50%; */
+}
+.side-text {
+  writing-mode: vertical-rl; /* כתיבה מלמעלה למטה */
+  transform: rotate(180deg); /* להפוך את הטקסט */
+  background-color: #e53935; /* אדום */
+  color: white;
+  padding: 20px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.main-text {
+  padding-right: 20px;
+  color: #0b1542; /* כחול כהה */
+  position: relative;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.main-text p {
+  margin: 0;
+}
+
+.main-text p span {
+  color: #e53935; /* אדום */
+}
+
+.quote-mark {
+  font-size: 20px;
+  color: #0b1542;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.bottom-name {
+  background-color: #0b1542; /* */
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+  /* margin-top: 10px; */
 }
 #btn{
 cursor: pointer;
@@ -98,4 +256,5 @@ cursor: pointer;
 }
 #menu{
   margin: 16px;
+  text-align: center;
 }
