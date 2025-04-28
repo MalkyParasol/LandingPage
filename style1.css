@@ -13,6 +13,7 @@ body{
   width: 90%;
   margin: 0 auto;
   font-size: larger;
+  overflow-x: hidden;
 }
 h1{
   text-align: center;
@@ -257,4 +258,18 @@ cursor: pointer;
 #menu{
   margin: 16px;
   text-align: center;
+}
+#advantages{
+  display: flex;
+  justify-content: space-between;
+}
+#bottom-box{
+  background-color: #0c143c;
+  color: #ffffff;
+  margin: 16px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+#inner-bootom-box{
+  padding: 20px;
 }
