@@ -1,8 +1,8 @@
 body{
   direction: rtl;
-  font-style: normal;
-  font-family: Verdana, "Helvetica Neue", Helvetica, "Franklin Gothic Medium", "Times New Roman", Times, sans-serif;
-  font-size: 16px;
+  /* font-style: normal; */
+  font-family: 'Assistant', sans-serif;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
   color: #000000;
@@ -12,7 +12,7 @@ body{
   /* text-align: center; */
   width: 90%;
   margin: 0 auto;
-  font-size: larger;
+  /* font-size: larger; */
   overflow-x: hidden;
 }
 h1{
@@ -58,7 +58,7 @@ p{
 }
 .big-blue{
   margin-top: 30px;
-  font-size: 35px;
+  font-size: 38px;
   font-weight: bold;
   text-align: center;
 }
@@ -66,7 +66,7 @@ p{
   display: inline-block;
   background-color: #EF2D27; /* אדום */
   color: white; /* צבע הטקסט */
-  font-size: 35px; /* גודל פונט */
+  font-size: 38px; /* גודל פונט */
   font-weight: bold; /* מודגש */
   text-decoration: none; /* בלי קו מתחת */
   padding: 5px 10px; 
@@ -130,6 +130,73 @@ margin-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
   }
+  #recommendation2{
+  position: relative;
+  border: 4px solid #000000;
+  border-radius: 100px;
+  padding: 30px 50px;
+  /* direction: rtl; */
+  text-align: right;
+  /* font-family: Arial, sans-serif; */
+  /* max-width: 800px; */
+  margin: auto;
+  overflow: hidden;
+  width: 75%;
+  color: red;
+  /* height: min-content; */
+  }
+  #recommendation2::before,
+#recommendation2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px; /* גובה החלק החתוך */
+  background-color: #000000; /* צבע המסגרת */
+}
+
+#recommendation2::before {
+  top: -4px; /* מיקום החלק העליון */
+}
+
+#recommendation2::after {
+  bottom: -4px; /* מיקום החלק התחתון */
+}
+  /* .quote-mark {
+    font-size: 60px;
+    color: navy;
+    position: absolute;
+  } */
+  
+  /* .quote-mark.top {
+    top: 10px;
+    left: 10px;
+  } */
+  
+  /* .quote-mark.bottom {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+  } */
+  /* .author {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'cursive'; /* אפשר לשים גופן ידני 
+    font-size: 24px;
+    color: navy;
+    text-align: center;
+  } */
+  
+  /* .author .small {
+    font-size: 14px;
+  } */
+  th{
+    color: red;
+  }
+  h4{
+    margin-bottom: 0px;
+  }
 ul{
 text-align:right !important;
 list-style-type: none; /* מסיר את הנקודות */
@@ -138,7 +205,7 @@ padding-left: 0; /* מסיר את הרווח השמאלי */
 ul li {
   position: relative;
   padding-right: 25px; /* מרווח לצורך המעוין */
-  font-size: 16px;
+  /* font-size: 16px; */
   /* display: inline-block; */
 }
 
@@ -158,11 +225,11 @@ ul li::before {
 }
 
 .quote-box {
- 
+  font-family: 'Varela Round', sans-serif;
   display: flex;
   border: 2px solid #0b1542; /* כחול כהה */
   direction: rtl;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   position: relative;
   overflow: hidden;
   /* padding: 20px; */
@@ -217,6 +284,7 @@ cursor: pointer;
 
 .blue {
   color: #0c143c;
+  text-align: center;
 }
 
 .unbold {
