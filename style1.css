@@ -381,6 +381,8 @@ cursor: pointer;
   color: #3366cc;
 }
 #ben-noon, #hachsharat-martzim{
-  border: #e53935;
-  border-style: solid;
+  border-bottom: 4px solid #0c143c;
+  width: 100vw;
+  margin: 0; 
+  padding: 0; 
 }
