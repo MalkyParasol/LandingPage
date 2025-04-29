@@ -382,7 +382,11 @@ cursor: pointer;
 }
 #ben-noon, #hachsharat-martzim{
   border-bottom: 4px solid #0c143c;
-  width: 100vw;
-  margin: 0; 
-  padding: 0; 
+  position: relative; /* or absolute/fixed if needed */
+  width: 100vw; /* 100% of the viewport width */
+  right: -5vw; /* offset to cancel body’s 90% centering */
+}
+.within{
+  width:90% !important;
+  margin:0 auto;
 }
