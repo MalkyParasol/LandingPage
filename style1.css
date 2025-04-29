@@ -64,7 +64,7 @@ p{
 }
 .red-button {
   display: inline-block;
-  background-color: #EF2D27; /* אדום */
+  background-color: #e53935; /* אדום */
   color: white; /* צבע הטקסט */
   font-size: 38px; /* גודל פונט */
   font-weight: bold; /* מודגש */
@@ -74,9 +74,12 @@ p{
   text-align: center;
   width:max-content;
   margin: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
   /* cursor: pointer; */
  
 }
+
 
 .center-container {
   display: flex;
@@ -92,7 +95,7 @@ p{
 #rotating-headers{
 position: relative;
 text-align: center;
-background-color: #ec2927;
+background-color: #e53935;
 color: #ffffff;
 padding-top: 2px;
 
@@ -118,13 +121,13 @@ flex-direction: column;
 }
 
 .red{
-color: red;
+color: #e53935;
 margin-top: 0px;
 margin-bottom: 0px;
 }
 .red2{
   font-weight: bold;
-  color: red;
+  color: #e53935;
   font-size: 25px;
   text-align: center;
   margin-top: 0px;
@@ -143,7 +146,7 @@ margin-bottom: 0px;
   margin: auto;
   overflow: hidden;
   width: 80%;
-  color: red;
+  color: #e53935;
   /* height: min-content; */
   }
   
@@ -205,7 +208,7 @@ margin-bottom: 0px;
   }
   
   th{
-    color: red;
+    color: #e53935;
   }
   h4{
     margin-bottom: 0px;
@@ -368,7 +371,16 @@ cursor: pointer;
 }
 #inner-bootom-box{
   padding: 20px;
+  font-family: 'Guttman Yad', sans-serif;
+  /* font-family: 'Gumman ', sans-serif !important; */
 }
 .li_red{
-  color: red;
+  color: #e53935;
+}
+.light-blue{
+  color: #3366cc;
+}
+#ben-noon, #hachsharat-martzim{
+  border: #e53935;
+  border-style: solid;
 }
