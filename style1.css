@@ -376,6 +376,7 @@ cursor: pointer;
   gap: 80px; /* רווח בין האלמנטים */
 }
 #advantages > div {
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -459,4 +460,7 @@ cursor: pointer;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.logo{
+  width: 100px;
 }
