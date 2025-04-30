@@ -453,4 +453,10 @@ cursor: pointer;
   display: flex;
   /* width: 100vw; */
 }
-
+#customers{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
