@@ -23,13 +23,13 @@ p{
   margin-top:0px ;
 }
 .circle-button {
-  width: 120px;
-  height: 120px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
   border: 8px solid #0b1542; /* כחול כהה */
   background: white;
   color: #e53935; /* אדום */
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   padding: 10px;
@@ -42,7 +42,7 @@ p{
   display: flex;
   flex-wrap: wrap; /* שיהיה גם ירידת שורות במסכים קטנים */
   justify-content: center; /* מרכז את כל הכפתורים */
-  gap: 20px; /* רווח בין כפתור לכפתור */
+  gap: 5px; /* רווח בין כפתור לכפתור */
   margin-top: 20px;
 }
 .circle-button::before {
@@ -239,18 +239,25 @@ ul li::before {
   /* border-bottom: 10px solid ; הקודקוד של המעוין */
  
 }
-
+/* #recommendations {
+  display: flex;
+  gap: 50px; 
+  flex-wrap: wrap;
+   align-items: flex-start;  
+   /* width: 100%; 
+} */
 .quote-box {
   font-family: 'Varela Round', sans-serif;
   display: flex;
-  border: 2px solid #0b1542; /* כחול כהה */
+  border: 2px solid #0b1542;
   direction: rtl;
-  /* font-family: Arial, sans-serif; */
   position: relative;
   overflow: hidden;
-  /* padding: 20px; */
   margin: 20px;
-  /* width: 50%; */
+  height: fit-content;
+  position: relative;
+  font-family: 'Guttman Yad', sans-serif;
+  
 }
 .side-text {
   writing-mode: vertical-rl; /* כתיבה מלמעלה למטה */
@@ -260,18 +267,20 @@ ul li::before {
   padding: 20px 10px;
   font-weight: bold;
   font-size: 20px;
-  text-align: center;
-}
-.main-text {
-  padding-right: 20px;
-  color: #0b1542; /* כחול כהה */
+  /* text-align: center; */
+ height: fit-content;
   position: relative;
-  font-size: 18px;
-  line-height: 1.8;
+  right: 5px;
 }
 
+
 .main-text p {
-  margin: 0;
+  /* margin: 0; */
+  padding-right: 20px;
+  color: red;
+  font-size: 18px;
+  position: absolute;
+  bottom: 70px
 }
 
 .main-text p span {
@@ -279,11 +288,18 @@ ul li::before {
 }
 
 .quote-mark {
-  font-size: 20px;
+  font-size: 100px;
+  color: #0b1542;
+  position: relative;
+  bottom: 40px;
+}
+.quote-mark-end{
+  font-size: 100px;
   color: #0b1542;
   position: absolute;
-  top: 0;
-  right: 10px;
+    top: 100px;
+    left: 10px;
+  
 }
 .bottom-name {
   background-color: #0b1542; /* */
@@ -361,7 +377,16 @@ cursor: pointer;
 }
 #advantages{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-wrap: wrap; /* מאפשר ירידת שורות */
+  justify-content: center; /* מרכז את האלמנטים */
+  gap: 80px; /* רווח בין האלמנטים */
+}
+#advantages > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* <<< השורה החשובה */
 }
 #bottom-box{
   background-color: #0c143c;
@@ -430,5 +455,9 @@ cursor: pointer;
   bottom: -6px; /* Adjust this value to move it up or down */
   left: 40%; /* Position it from the left */
   transform: translateY(50%); /* Vertically align the middle of the h3 to the border */
+}
+#questions{
+  display: flex;
+  width: 100vw;
 }
 
