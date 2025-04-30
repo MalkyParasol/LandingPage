@@ -121,6 +121,8 @@ flex-direction: column;
 }
 
 .red{
+/* display: flex;
+align-items: flex-start;  */
 color: #e53935;
 margin-top: 0px;
 margin-bottom: 0px;
@@ -138,7 +140,7 @@ margin-bottom: 0px;
   border-right: 6px solid #000000;
   border-left: 6px solid #000000;
   border-radius: 100px;
-  padding: 0px  160px 0px 50px;
+  padding: 50px  160px 0px 50px;
   /* direction: rtl; */
   text-align: right;
   /* font-family: Arial, sans-serif; */
@@ -207,23 +209,25 @@ margin-bottom: 0px;
 /* text-align:right !important; */
 list-style-type: none; /* מסיר את הנקודות */
 /* padding-left: 0; /* מסיר את הרווח השמאלי */
+/* padding-inline-start: 0px; */
 } 
-ul li {
+/* ul li {
   position: relative;
-  padding-inline-start: 1.2em;
+  /* padding-inline-start: 1.2em; */
+  /* right: 0px; */
   
-} 
+/* } 
 
  ul li::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 0.4em;
-  height: 2px;
-  background-color: black; /* אפשר לשנות לצבע אחר */
+  right: 0px;
+  top: 0.8em;
+  width: 0.2em;
+  height: 1px;
+  background-color: black;  */
   
-} 
+/* }  */ 
 /* #recommendations {
   display: flex;
   gap: 50px; 
@@ -239,9 +243,10 @@ ul li {
   position: relative;
   overflow: hidden;
   margin: 20px;
-  height: fit-content;
+  /* height: fit-content; */
   position: relative;
   font-family: 'Guttman Yad', sans-serif;
+
   
 }
 .side-text {
@@ -261,11 +266,12 @@ ul li {
 
 .main-text p {
   /* margin: 0; */
-  padding-right: 20px;
+  /* padding-right: 20px; */
   color: red;
   font-size: 18px;
-  position: absolute;
-  bottom: 70px
+  /* position: absolute;
+  bottom: 70px */
+  padding: 20px;
 }
 
 .main-text p span {
@@ -291,8 +297,10 @@ ul li {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  text-align: center;
-
+  text-align: left;
+  padding: 20px 10px;
+position: relative;
+top: 20px;
   /* margin-top: 10px; */
 }
 #btn{
@@ -443,6 +451,6 @@ cursor: pointer;
 }
 #questions{
   display: flex;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
