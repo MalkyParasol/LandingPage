@@ -1,11 +1,11 @@
 body{
   direction: rtl;
+  color: #0b1542;
   /* font-style: normal; */
   font-family: 'Assistant', sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
-  color: #000000;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -354,6 +354,7 @@ cursor: pointer;
   /* line-height: 1.2; */
   margin:0 auto;
   padding: 10px;
+  font-family: 'Guttman Yad-Brush', sans-serif;
   /* text-align: center; */
  
 
@@ -389,4 +390,45 @@ cursor: pointer;
 .within{
   width:90% !important;
   margin:0 auto;
+  font-family: 'Guttman Yad-Brush', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+/*  */
+
+#ben-noon {
+  border-bottom: 4px solid #0c143c;
+  position: relative; /* Important for absolute positioning of the h3 */
+  width: 100vw;
+  right: -5vw;
+  padding-bottom: 15px; /* Add some space below the text */
+  border-top: none; /* Remove top border */
+  border-left: none; /* Remove left border */
+  border-right: none; /* Remove right border */
+}
+#hachsharat-martzim{
+  border-bottom: 4px solid #0c143c;
+  position: relative; /* Important for absolute positioning of the h3 */
+  width: 100vw;
+  right: -5vw;
+  padding-bottom: 15px; /* Add some space below the text */
+  border-top: none; /* Remove top border */
+  border-left: none; /* Remove left border */
+  border-right: none; /* Remove right border */
+}
+
+#ben-noon h3.menu-item_end {
+  padding: 0 20px; /* Add some padding around the text */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  bottom: -6px; /* Adjust this value to move it up or down */
+  left: 15%; /* Position it from the left */
+  transform: translateY(50%); /* Vertically align the middle of the h3 to the border */
+}
+#hachsharat-martzim h3.menu-item_end {
+  padding: 0 20px; /* Add some padding around the text */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  bottom: -6px; /* Adjust this value to move it up or down */
+  left: 40%; /* Position it from the left */
+  transform: translateY(50%); /* Vertically align the middle of the h3 to the border */
+}
+
