@@ -1,9 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 body{
   direction: rtl;
   color: #0b1542;
   /* font-style: normal; */
   font-family: 'Heebo', sans-serif;
-  font-size: 30px;
+  font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 400;
   line-height: 1.5;
   background-color: #ffffff;
@@ -13,7 +18,7 @@ body{
   width: 90%;
   margin: 0 auto;
   /* font-size: larger; */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 h1{
   text-align: center;
@@ -89,7 +94,7 @@ p{
 }
 
 #header{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 #rotating-headers{
@@ -99,6 +104,73 @@ background-color: #e53935;
 color: #ffffff;
 padding-top: 2px;
 
+}
+
+/* here starts the responsive */
+#rotating-headers h2 {
+  font-size: clamp(1.2rem, 4vw, 3rem);;
+}
+
+#static-header h1 {
+  font-size: clamp(2.75rem, 6.5vw, 6.5rem);
+}
+@media (min-width: 1024px) and (max-width: 1496px){
+  #rotating-headers h2 {
+    font-size: clamp(1.2rem, 3.5vw, 2rem); /* Reduce size as screen width decreases */
+  }
+  #static-header h1 {
+    font-size: clamp(2.2rem, 5.5vw, 5rem);
+  }
+}
+@media (max-width: 1024px) and (min-width: 911px) {
+  #rotating-headers h2 {
+    font-size: clamp(0.9rem, 3.5vw, 1.8rem); /* mobile-sized text */
+  }
+  /* #static-header h1 {
+    font-size: clamp(1.8rem, 5vw, 4rem);
+  } */
+}
+@media (max-width: 911px) and (min-width:405px) {
+  #rotating-headers h2 {
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
+  }
+  #static-header h1 {
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
+  }
+}
+@media (max-width: 407px) and (min-width: 274px) {
+  #rotating-headers h2 {
+    font-size: clamp(0.5rem, 2.5vw, 1rem); /* mobile-sized text */
+  }
+  #static-header h1 {
+    font-size: clamp(1.8rem, 5vw, 4rem);
+  }
+  .menu-item {
+    font-size: 10px !important;
+  }
+
+}
+@media (max-width: 274px) and (min-width: 214px) {
+  #rotating-headers h2 {
+    font-size: clamp(0.4rem, 2vw, 0.8rem); /* smaller for very narrow screens */
+  }
+  #static-header h1 {
+    font-size: clamp(1.2rem, 4.5vw, 3.5rem);
+  }
+  .menu-item {
+    font-size: 8px !important;
+  }
+}
+@media (max-width: 214px) {
+  #rotating-headers h2 {
+    font-size: clamp(0.3rem, 1.5vw, 0.6rem); /* extra small for ultra-narrow devices */
+  }
+  #static-header h1 {
+    font-size: clamp(1rem, 4vw, 3rem);
+  }
+    .menu-item {
+    font-size: 8px !important;
+  }
 }
 #rotating-headers> h2{
 margin-bottom: 0px !important;
@@ -339,6 +411,7 @@ cursor: pointer;
   animation: slideInFromLeft 1s ease-out forwards;
 }
 .menu-item{
+  font-size: clamp(1rem, 3vw, 2rem);
   background-color: #0c143c;
   color: #ffffff;
   display: inline-block;
