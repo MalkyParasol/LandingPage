@@ -74,29 +74,25 @@ p {
   border-radius: 50%;
   /* box-sizing: border-box; */
 }
-
-.big-blue {
+.big-blue{
+  /* font-size: clamp(1rem, 3vw, 2.375rem); */
+  font-size: clamp(1.25rem, 3vw, 2.375rem);
   margin-top: 30px;
-  font-size: 38px;
+  /* font-size: 38px; */
   font-weight: bold;
   text-align: center;
 }
 
 .red-button {
+  font-size: clamp(1rem, 3vw, 2.375rem);
   display: inline-block;
-  background-color: #e53935;
-  /* אדום */
-  color: white;
-  /* צבע הטקסט */
-  font-size: 38px;
-  /* גודל פונט */
-  font-weight: bold;
-  /* מודגש */
-  text-decoration: none;
-  /* בלי קו מתחת */
-  padding: 5px 10px;
-  border-radius: 40px;
-  /* עיגול פינות גדול */
+  background-color: #e53935; /* אדום */
+  color: white; /* צבע הטקסט */
+  /* font-size: 38px; */
+  font-weight: bold; /* מודגש */
+  text-decoration: none; /* בלי קו מתחת */
+  padding: 5px 10px; 
+  border-radius: 40px; /* עיגול פינות גדול */
   text-align: center;
   width: max-content;
   margin: 30px;
@@ -155,6 +151,10 @@ p {
     font-size: clamp(0.9rem, 3.5vw, 1.8rem);
     /* mobile-sized text */
   }
+  #advantages>div {
+    width: 50px !important;
+    /* <<< השורה החשובה */
+  }
 
   /* #static-header h1 {
     font-size: clamp(1.8rem, 5vw, 4rem);
@@ -169,6 +169,11 @@ p {
   #static-header h1 {
     font-size: clamp(2rem, 5.5vw, 4.5rem);
   }
+  #advantages>div {
+    width: 50px !important;
+    /* <<< השורה החשובה */
+  }
+
 }
 
 @media (max-width: 407px) and (min-width: 274px) {
@@ -184,6 +189,11 @@ p {
   .menu-item {
     font-size: 10px !important;
   }
+  #advantages>div {
+    width: 50px !important;
+    /* <<< השורה החשובה */
+  }
+
 
 }
 
@@ -200,6 +210,11 @@ p {
   .menu-item {
     font-size: 8px !important;
   }
+  #advantages>div {
+    width: 50px !important;
+    /* <<< השורה החשובה */
+  }
+
 }
 
 @media (max-width: 214px) {
@@ -215,6 +230,11 @@ p {
   .menu-item {
     font-size: 8px !important;
   }
+  #advantages>div {
+    width: 50px !important;
+    /* <<< השורה החשובה */
+  }
+
 }
 
 #rotating-headers>h2 {
@@ -377,9 +397,10 @@ ul {
   position: relative;
   /* font-family: 'Guttman Yad', sans-serif; */
   font-family: 'Guttman Yad-Brush', sans-serif;
-
+  min-width: 0px;
 
 }
+
 
 .side-text {
   writing-mode: vertical-rl;
@@ -415,6 +436,12 @@ ul {
   color: #e53935;
   /* אדום */
 }
+.main-text{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  margin-bottom: 32px !important;
+}
 
 .quote-mark {
   font-size: 100px;
@@ -443,6 +470,15 @@ ul {
   top:28px;
   font-style: italic;
   /* margin-top: 10px; */
+}
+@media (max-width:1307px){
+  #recommendations_1_2{
+    display: flex;
+    flex-direction: column;
+  }
+  #quote-box-left{
+    margin-left: 150px;
+  }
 }
 
 #btn {
