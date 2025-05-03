@@ -1,9 +1,11 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-body{
+
+body {
   direction: rtl;
   color: #0b1542;
   /* font-style: normal; */
@@ -20,20 +22,25 @@ body{
   /* font-size: larger; */
   overflow-x: hidden !important;
 }
-h1{
+
+h1 {
   text-align: center;
 }
-p{
+
+p {
   margin-bottom: 0px;
-  margin-top:0px ;
+  margin-top: 0px;
 }
+
 .circle-button {
   width: 145px;
   height: 145px;
   border-radius: 50%;
-  border: 8px solid #0b1542; /* כחול כהה */
+  border: 8px solid #0b1542;
+  /* כחול כהה */
   background: white;
-  color: #e53935; /* אדום */
+  color: #e53935;
+  /* אדום */
   font-size: 28px;
   font-weight: bold;
   text-align: center;
@@ -43,13 +50,18 @@ p{
   overflow: hidden;
   cursor: pointer;
 }
+
 .buttons-wrapper {
   display: flex;
-  flex-wrap: wrap; /* שיהיה גם ירידת שורות במסכים קטנים */
-  justify-content: center; /* מרכז את כל הכפתורים */
-  gap: 5px; /* רווח בין כפתור לכפתור */
+  flex-wrap: wrap;
+  /* שיהיה גם ירידת שורות במסכים קטנים */
+  justify-content: center;
+  /* מרכז את כל הכפתורים */
+  gap: 5px;
+  /* רווח בין כפתור לכפתור */
   margin-top: 20px;
 }
+
 .circle-button::before {
   content: "";
   position: absolute;
@@ -57,175 +69,214 @@ p{
   right: 0px;
   bottom: 0px;
   left: 0px;
-  border: 6px solid #e53935; /* אדום פנימי */
+  border: 6px solid #e53935;
+  /* אדום פנימי */
   border-radius: 50%;
   /* box-sizing: border-box; */
 }
-.big-blue{
+
+.big-blue {
   margin-top: 30px;
   font-size: 38px;
   font-weight: bold;
   text-align: center;
 }
+
 .red-button {
   display: inline-block;
-  background-color: #e53935; /* אדום */
-  color: white; /* צבע הטקסט */
-  font-size: 38px; /* גודל פונט */
-  font-weight: bold; /* מודגש */
-  text-decoration: none; /* בלי קו מתחת */
-  padding: 5px 10px; 
-  border-radius: 40px; /* עיגול פינות גדול */
+  background-color: #e53935;
+  /* אדום */
+  color: white;
+  /* צבע הטקסט */
+  font-size: 38px;
+  /* גודל פונט */
+  font-weight: bold;
+  /* מודגש */
+  text-decoration: none;
+  /* בלי קו מתחת */
+  padding: 5px 10px;
+  border-radius: 40px;
+  /* עיגול פינות גדול */
   text-align: center;
-  width:max-content;
+  width: max-content;
   margin: 30px;
   padding-left: 40px;
   padding-right: 40px;
   /* cursor: pointer; */
- 
+
 }
 
 
 .center-container {
   display: flex;
-  justify-content: center; /* ממקם את הכפתור במרכז אופקית */
-  
-  
+  justify-content: center;
+  /* ממקם את הכפתור במרכז אופקית */
+
+
 }
 
-#header{
+#header {
   width: 90%;
   margin: 0 auto;
 }
-#rotating-headers{
-position: relative;
-text-align: center;
-background-color: #e53935;
-color: #ffffff;
-padding-top: 2px;
+
+#rotating-headers {
+  position: relative;
+  text-align: center;
+  background-color: #e53935;
+  color: #ffffff;
+  padding-top: 2px;
 
 }
 
 /* here starts the responsive */
 #rotating-headers h2 {
-  font-size: clamp(1.2rem, 4vw, 3rem);;
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  ;
 }
 
 #static-header h1 {
   font-size: clamp(2.75rem, 6.5vw, 6.5rem);
 }
-@media (min-width: 1024px) and (max-width: 1496px){
+
+@media (min-width: 1024px) and (max-width: 1496px) {
   #rotating-headers h2 {
-    font-size: clamp(1.2rem, 3.5vw, 2rem); /* Reduce size as screen width decreases */
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    /* Reduce size as screen width decreases */
   }
+
   #static-header h1 {
     font-size: clamp(2.2rem, 5.5vw, 5rem);
   }
 }
+
 @media (max-width: 1024px) and (min-width: 911px) {
   #rotating-headers h2 {
-    font-size: clamp(0.9rem, 3.5vw, 1.8rem); /* mobile-sized text */
+    font-size: clamp(0.9rem, 3.5vw, 1.8rem);
+    /* mobile-sized text */
   }
+
   /* #static-header h1 {
     font-size: clamp(1.8rem, 5vw, 4rem);
   } */
 }
+
 @media (max-width: 911px) and (min-width:405px) {
   #rotating-headers h2 {
     font-size: clamp(0.8rem, 3vw, 1.5rem);
   }
+
   #static-header h1 {
     font-size: clamp(2rem, 5.5vw, 4.5rem);
   }
 }
+
 @media (max-width: 407px) and (min-width: 274px) {
   #rotating-headers h2 {
-    font-size: clamp(0.5rem, 2.5vw, 1rem); /* mobile-sized text */
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+    /* mobile-sized text */
   }
+
   #static-header h1 {
     font-size: clamp(1.8rem, 5vw, 4rem);
   }
+
   .menu-item {
     font-size: 10px !important;
   }
 
 }
+
 @media (max-width: 274px) and (min-width: 214px) {
   #rotating-headers h2 {
-    font-size: clamp(0.4rem, 2vw, 0.8rem); /* smaller for very narrow screens */
+    font-size: clamp(0.4rem, 2vw, 0.8rem);
+    /* smaller for very narrow screens */
   }
+
   #static-header h1 {
     font-size: clamp(1.2rem, 4.5vw, 3.5rem);
   }
+
   .menu-item {
     font-size: 8px !important;
   }
 }
+
 @media (max-width: 214px) {
   #rotating-headers h2 {
-    font-size: clamp(0.3rem, 1.5vw, 0.6rem); /* extra small for ultra-narrow devices */
+    font-size: clamp(0.3rem, 1.5vw, 0.6rem);
+    /* extra small for ultra-narrow devices */
   }
+
   #static-header h1 {
     font-size: clamp(1rem, 4vw, 3rem);
   }
-    .menu-item {
+
+  .menu-item {
     font-size: 8px !important;
   }
 }
-#rotating-headers> h2{
-margin-bottom: 0px !important;
-font-weight: 400;
-}
-#static-header{
-position: relative;
-background-color: #0c143c;
-color: #ffffff;
-font-size: 170%;
-}
-#static-header> h1{
-margin-top: 0px !important;
-margin-bottom: 0px !important;
-}
-#text{
-display: flex;
-justify-content: center;
-flex-direction: column;
+
+#rotating-headers>h2 {
+  margin-bottom: 0px !important;
+  font-weight: 400;
 }
 
-.red{
-/* display: flex;
-align-items: flex-start;  */
-color: #e53935;
-margin-top: 0px;
-margin-bottom: 0px;
+#static-header {
+  position: relative;
+  background-color: #0c143c;
+  color: #ffffff;
+  font-size: 170%;
 }
-.red2{
+
+#static-header>h1 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.red {
+  /* display: flex;
+align-items: flex-start;  */
+  color: #e53935;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.red2 {
   font-weight: bold;
   color: #e53935;
   font-size: 25px;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-  }
-  #recommendation2{
+}
+
+#recommendation2 {
   position: relative;
   border-right: 6px solid #000000;
   border-left: 6px solid #000000;
   border-radius: 100px;
-  padding: 50px  160px 0px 50px;
+  padding: 0px 160px 20px 50px;
   /* direction: rtl; */
   text-align: right;
   /* font-family: Arial, sans-serif; */
-   /* max-width: 80%;  */
+  /* max-width: 80%;  */
   margin: auto;
   overflow: hidden;
   width: 80%;
   color: #e53935;
   /* height: min-content; */
-  }
-  
+  font-size: 28px;
+}
 
- #recommendation2::before {
+
+#recommendation2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -245,49 +296,56 @@ margin-bottom: 0px;
   background-color: black;
 }
 
-  
-  
-  .quote-mark-top {
-    color: black;
-    /* font-size: 60px; */
-    /* top: 10px;
-    left: 10px; */
-  }
-  
-  .quote-mark-bottom {
-    color: black;
-    bottom: 10px;
-    right: 10px;
-    transform: rotate(180deg);
-  }
-  .author {
-    writing-mode: vertical-rl; /* כתיבה מלמעלה למטה */
-    transform: rotate(180deg); 
-    position: absolute;
-     top: 140px;
-    right: 60px; 
-    font-family: 'Guttman Yad-Brush', sans-serif;
-    text-align: left;
-   
-  } 
 
-  th{
-    color: #e53935;
-  }
-  h4{
-    margin-bottom: 0px;
-  }
- ul{
-/* text-align:right !important; */
-list-style-type: none; /* מסיר את הנקודות */
-/* padding-left: 0; /* מסיר את הרווח השמאלי */
-/* padding-inline-start: 0px; */
-} 
+
+.quote-mark-top {
+  color: black;
+  /* font-size: 60px; */
+  /* top: 10px;
+    left: 10px; */
+}
+
+.quote-mark-bottom {
+  color: black;
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.author {
+  writing-mode: vertical-rl;
+  /* כתיבה מלמעלה למטה */
+  transform: rotate(180deg);
+  position: absolute;
+  top: 110px;
+  right: 60px;
+  font-family: 'Guttman Yad-Brush', sans-serif;
+  text-align: left;
+  /* font-style: italic; */
+
+}
+
+th {
+  color: #e53935;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+ul {
+  /* text-align:right !important; */
+  list-style-type: none;
+  /* מסיר את הנקודות */
+  /* padding-left: 0; /* מסיר את הרווח השמאלי */
+  /* padding-inline-start: 0px; */
+}
+
 /* ul li {
   position: relative;
   /* padding-inline-start: 1.2em; */
-  /* right: 0px; */
-  
+/* right: 0px; */
+
 /* } 
 
  ul li::before {
@@ -298,8 +356,8 @@ list-style-type: none; /* מסיר את הנקודות */
   width: 0.2em;
   height: 1px;
   background-color: black;  */
-  
-/* }  */ 
+
+/* }  */
 /* #recommendations {
   display: flex;
   gap: 50px; 
@@ -308,7 +366,7 @@ list-style-type: none; /* מסיר את הנקודות */
    /* width: 100%; 
 } */
 .quote-box {
-  font-family: 'Varela Round', sans-serif;
+
   display: flex;
   border: 2px solid #0b1542;
   direction: rtl;
@@ -317,22 +375,28 @@ list-style-type: none; /* מסיר את הנקודות */
   margin: 20px;
   /* height: fit-content; */
   position: relative;
-  font-family: 'Guttman Yad', sans-serif;
+  /* font-family: 'Guttman Yad', sans-serif; */
+  font-family: 'Guttman Yad-Brush', sans-serif;
 
-  
+
 }
+
 .side-text {
-  writing-mode: vertical-rl; /* כתיבה מלמעלה למטה */
-  transform: rotate(180deg); /* להפוך את הטקסט */
-  background-color: #e53935; /* אדום */
+  writing-mode: vertical-rl;
+  /* כתיבה מלמעלה למטה */
+  transform: rotate(180deg);
+  /* להפוך את הטקסט */
+  background-color: #e53935;
+  /* אדום */
   color: white;
-  padding: 20px 10px;
+  
   font-weight: bold;
-  font-size: 20px;
-  /* text-align: center; */
- height: fit-content;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  /* height: fit-content; */
   position: relative;
-  right: 5px;
+  right: 3px;
 }
 
 
@@ -340,14 +404,16 @@ list-style-type: none; /* מסיר את הנקודות */
   /* margin: 0; */
   /* padding-right: 20px; */
   color: red;
-  font-size: 18px;
+  font-size: 21px;
   /* position: absolute;
   bottom: 70px */
-  padding: 20px;
+  padding:  0px 20px;
+  font-style: italic;
 }
 
 .main-text p span {
-  color: #e53935; /* אדום */
+  color: #e53935;
+  /* אדום */
 }
 
 .quote-mark {
@@ -356,27 +422,31 @@ list-style-type: none; /* מסיר את הנקודות */
   position: relative;
   bottom: 40px;
 }
-.quote-mark-end{
+
+.quote-mark-end {
   font-size: 100px;
   color: #0b1542;
   position: absolute;
-    top: 100px;
-    left: 10px;
-  
+  top: 100px;
+  left: 10px;
+
 }
-.bottom-name {
-  background-color: #0b1542; /* */
+
+.bottom-text {
+  background-color: #0b1542;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   text-align: left;
-  padding: 20px 10px;
-position: relative;
-top: 20px;
+  padding: 20px 10px 0px 10px;
+  position: relative;
+  top:28px;
+  font-style: italic;
   /* margin-top: 10px; */
 }
-#btn{
-cursor: pointer;
+
+#btn {
+  cursor: pointer;
 }
 
 .blue {
@@ -393,11 +463,13 @@ cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
+
 @keyframes slideInFromLeft {
   from {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -407,10 +479,12 @@ cursor: pointer;
 #rotating-headers.slide-in {
   animation: slideInFromLeft 2s ease-out forwards;
 }
+
 #static-header.slide-in {
   animation: slideInFromLeft 1s ease-out forwards;
 }
-.menu-item{
+
+.menu-item {
   font-size: clamp(1rem, 3vw, 2rem);
   background-color: #0c143c;
   color: #ffffff;
@@ -419,13 +493,15 @@ cursor: pointer;
   padding-left: 8px;
   padding-right: 8px;
   line-height: 1.2;
-  margin:4px
+  margin: 4px
 }
-#menu{
+
+#menu {
   margin: 16px;
   text-align: center;
 }
-.menu-item_end{
+
+.menu-item_end {
   background-color: #0c143c;
   color: #ffffff;
   display: inline-block;
@@ -434,106 +510,149 @@ cursor: pointer;
   /* padding-left: 8px; */
   /* padding-right: 8px; */
   /* line-height: 1.2; */
-  margin:0 auto;
+  margin: 0 auto;
   padding: 10px;
   font-family: 'Guttman Yad-Brush', sans-serif;
   /* text-align: center; */
- 
+
 
 }
-#advantages{
+
+#advantages {
   display: flex;
   /* justify-content: space-between; */
-  flex-wrap: wrap; /* מאפשר ירידת שורות */
-  justify-content: center; /* מרכז את האלמנטים */
-  gap: 80px; /* רווח בין האלמנטים */
+  flex-wrap: wrap;
+  /* מאפשר ירידת שורות */
+  justify-content: center;
+  /* מרכז את האלמנטים */
+  gap: 80px;
+  /* רווח בין האלמנטים */
 }
-#advantages > div {
+
+#advantages>div {
   width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* <<< השורה החשובה */
+  justify-content: center;
+  /* <<< השורה החשובה */
 }
-#bottom-box{
+
+#bottom-box {
   background-color: #0c143c;
   color: #ffffff;
   margin: 16px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
-#inner-bootom-box{
+
+#inner-bootom-box {
   padding: 20px;
   font-family: 'Guttman Yad', sans-serif;
   /* font-family: 'Gumman ', sans-serif !important; */
 }
-.li_red{
+
+.li_red {
   color: #e53935;
 }
-.light-blue{
+
+.light-blue {
   color: #3366cc;
 }
-#ben-noon, #hachsharat-martzim{
+
+#ben-noon,
+#hachsharat-martzim {
   border-bottom: 4px solid #0c143c;
-  position: relative; /* or absolute/fixed if needed */
-  width: 100vw; /* 100% of the viewport width */
-  right: -5vw; /* offset to cancel body’s 90% centering */
+  position: relative;
+  /* or absolute/fixed if needed */
+  width: 100vw;
+  /* 100% of the viewport width */
+  right: -5vw;
+  /* offset to cancel body’s 90% centering */
 }
-.within{
-  width:90% !important;
-  margin:0 auto;
+
+.within {
+  width: 90% !important;
+  margin: 0 auto;
   font-family: 'Guttman Yad-Brush', sans-serif;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 /*  */
 
 #ben-noon {
   border-bottom: 4px solid #0c143c;
-  position: relative; /* Important for absolute positioning of the h3 */
+  position: relative;
+  /* Important for absolute positioning of the h3 */
   width: 100vw;
   right: -5vw;
-  padding-bottom: 15px; /* Add some space below the text */
-  border-top: none; /* Remove top border */
-  border-left: none; /* Remove left border */
-  border-right: none; /* Remove right border */
+  padding-bottom: 15px;
+  /* Add some space below the text */
+  border-top: none;
+  /* Remove top border */
+  border-left: none;
+  /* Remove left border */
+  border-right: none;
+  /* Remove right border */
 }
-#hachsharat-martzim{
+
+#hachsharat-martzim {
   border-bottom: 4px solid #0c143c;
-  position: relative; /* Important for absolute positioning of the h3 */
+  position: relative;
+  /* Important for absolute positioning of the h3 */
   width: 100vw;
   right: -5vw;
-  padding-bottom: 15px; /* Add some space below the text */
-  border-top: none; /* Remove top border */
-  border-left: none; /* Remove left border */
-  border-right: none; /* Remove right border */
+  padding-bottom: 15px;
+  /* Add some space below the text */
+  border-top: none;
+  /* Remove top border */
+  border-left: none;
+  /* Remove left border */
+  border-right: none;
+  /* Remove right border */
 }
 
 #ben-noon h3.menu-item_end {
-  padding: 0 20px; /* Add some padding around the text */
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  bottom: -6px; /* Adjust this value to move it up or down */
-  left: 15%; /* Position it from the left */
-  transform: translateY(50%); /* Vertically align the middle of the h3 to the border */
+  padding: 0 20px;
+  /* Add some padding around the text */
+  position: absolute;
+  /* Position it relative to the nearest positioned ancestor */
+  bottom: -6px;
+  /* Adjust this value to move it up or down */
+  left: 15%;
+  /* Position it from the left */
+  transform: translateY(50%);
+  /* Vertically align the middle of the h3 to the border */
 }
+
 #hachsharat-martzim h3.menu-item_end {
-  padding: 0 20px; /* Add some padding around the text */
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  bottom: -6px; /* Adjust this value to move it up or down */
-  left: 40%; /* Position it from the left */
-  transform: translateY(50%); /* Vertically align the middle of the h3 to the border */
+  padding: 0 20px;
+  /* Add some padding around the text */
+  position: absolute;
+  /* Position it relative to the nearest positioned ancestor */
+  bottom: -6px;
+  /* Adjust this value to move it up or down */
+  left: 40%;
+  /* Position it from the left */
+  transform: translateY(50%);
+  /* Vertically align the middle of the h3 to the border */
 }
-#questions{
+
+#questions {
   display: flex;
+  gap: 50px;
   /* width: 100vw; */
 }
-#customers{
+
+#customers {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.logo{
+
+.logo {
   width: 100px;
 }
