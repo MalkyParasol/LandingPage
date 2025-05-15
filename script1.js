@@ -6,7 +6,10 @@ var headers = [
 let staticHeader = document.getElementById("static-header");
 
 
-var currentIndex = 0;
+
+
+let currentIndex = 0;
+let fromLeft = true; // start from left
 
 
 function showOnlyRotatingHeader(index) {
@@ -14,11 +17,15 @@ function showOnlyRotatingHeader(index) {
     h.style.display = i === index ? "block" : "none";
   });
 
-  // Animate the container
   const container = document.getElementById("rotating-headers");
-  container.classList.remove("slide-in");
-  void container.offsetWidth; // Force reflow
-  container.classList.add("slide-in");
+  container.classList.remove("slide-in", "slide-in-right");
+  void container.offsetWidth;
+
+  if (fromLeft) {
+    container.classList.add("slide-in");
+  } else {
+    container.classList.add("slide-in-right");
+  }
 
   staticHeader.style.visibility = "hidden";
 }
@@ -28,29 +35,26 @@ function showWithStatic(index) {
   headers[index].style.display = "block";
   staticHeader.style.visibility = "visible"; // Hide static header
   const container = document.getElementById("static-header");
-  container.classList.remove("slide-in");
+  container.classList.remove("slide-in-from-top");
   void container.offsetWidth; // Force reflow
-  container.classList.add("slide-in");
+  container.classList.add("slide-in-from-top");
 }
 
 function startCycle() {
-
   showOnlyRotatingHeader(currentIndex);
-  
 
-  // After 3 minutes, show static header with current rotating one
+  // After 3 seconds, show static header
   setTimeout(() => {
     showWithStatic(currentIndex);
-  }, 3000); // 3 minutes
-  
+  }, 3000);
 
-  // After 6 minutes, move to next rotating header
+  // After 6 seconds, go to next header and flip direction
   setTimeout(() => {
     currentIndex = (currentIndex + 1) % headers.length;
-    startCycle(); // Recurse for next header
-  }, 6000); // 6 minutes
+    fromLeft = !fromLeft; // alternate direction
+    startCycle();
+  }, 6000);
 }
-
 startCycle();
 
 // var btn = document.querySelectorAll('btn');

@@ -112,12 +112,14 @@ p {
 }
 
 #header {
+  position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
 #rotating-headers {
   position: relative;
+  z-index: 2;
   text-align: center;
   background-color: #e53935;
   color: #ffffff;
@@ -133,6 +135,10 @@ p {
 
 #static-header h1 {
   font-size: clamp(2.75rem, 6.5vw, 6.5rem);
+}
+#static-header{
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 1024px) and (max-width: 1496px) {
@@ -511,13 +517,40 @@ ul {
     opacity: 1;
   }
 }
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* New class for right-to-left animation */
+#rotating-headers.slide-in-right {
+  animation: slideInFromRight 2s ease-out forwards;
+}
 
 #rotating-headers.slide-in {
   animation: slideInFromLeft 2s ease-out forwards;
 }
 
-#static-header.slide-in {
-  animation: slideInFromLeft 1s ease-out forwards;
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50%); /* was -100% */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#static-header.slide-in-from-top {
+  animation: slideInFromTop 1s ease-out forwards;
 }
 
 .menu-item {
