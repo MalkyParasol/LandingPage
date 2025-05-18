@@ -725,3 +725,15 @@ ul {
 .logo {
   width: 100px;
 }
+
+/*אנימציה אייקונים*/
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 5s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
