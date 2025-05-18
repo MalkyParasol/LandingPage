@@ -345,7 +345,7 @@ align-items: flex-start;  */
   position: absolute;
   top: 110px;
   right: 60px;
-  font-family: 'Guttman Yad-Brush', sans-serif;
+  font-family: 'Playpen Sans Hebrew', sans-serif;
   text-align: left;
   /* font-style: italic; */
 
@@ -401,8 +401,7 @@ ul {
   margin: 20px;
   /* height: fit-content; */
   position: relative;
-  /* font-family: 'Guttman Yad', sans-serif; */
-  font-family: 'Guttman Yad-Brush', sans-serif;
+  font-family: 'Playpen Sans Hebrew', sans-serif;
   min-width: 0px;
 
 }
@@ -581,7 +580,7 @@ ul {
   /* line-height: 1.2; */
   margin: 0 auto;
   padding: 10px;
-  font-family: 'Guttman Yad-Brush', sans-serif;
+  font-family: 'Playpen Sans Hebrew', sans-serif;
   /* text-align: center; */
 
 
@@ -617,7 +616,7 @@ ul {
 
 #inner-bootom-box {
   padding: 20px;
-  font-family: 'Guttman Yad', sans-serif;
+  font-family: 'Playpen Sans Hebrew', sans-serif;
   /* font-family: 'Gumman ', sans-serif !important; */
 }
 
@@ -643,7 +642,7 @@ ul {
 .within {
   width: 90% !important;
   margin: 0 auto;
-  font-family: 'Guttman Yad-Brush', sans-serif;
+  font-family: 'Playpen Sans Hebrew', sans-serif;
   margin-top: 20px;
   margin-bottom: 20px;
 }
