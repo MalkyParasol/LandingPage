@@ -725,14 +725,34 @@ ul {
   width: 100px;
 }
 
-/*אנימציה אייקונים*/
-.fade-in {
+/* אנימציה אייקונים*/
+#advantages > div {
   opacity: 0;
-  animation: fadeInAnimation 5s ease-in forwards;
 }
 
-@keyframes fadeInAnimation {
-  to {
+.fade-in {
+  animation: fadeInOutAnimation 12s ease-in-out forwards;
+  /* animation-iteration-count: 2; חזרה 3 פעמים */
+}
+
+@keyframes fadeInOutAnimation {
+  0% {
+    opacity: 0;
+  }
+  20% {
     opacity: 1;
   }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;  /* סיום באנימציה עם גלוי */
+  }
 }
+

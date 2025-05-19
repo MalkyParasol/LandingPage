@@ -81,3 +81,38 @@ const buttons = document.querySelectorAll(".circle-button");
       messageEl.textContent = messages[index];
     });
   });
+  
+/*אנימציה איקונים*/
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.target.id === "advantages") {
+      if (entry.isIntersecting) {
+        // כשה-dive נכנס לתצוגה, מוסיפים את האנימציה
+        entry.target.classList.add("fade-in");
+      } else {
+        // כשה-dive יוצא מהתצוגה, מסירים את האנימציה כדי להסתיר
+        entry.target.classList.remove("fade-in");
+      }
+    } else {
+      // לכל האייקונים (שלא #advantages)
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+        observer.unobserve(entry.target); // לא רוצים להסתכל עליהם יותר
+      }
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+// מניח ש advantages מוגדר, לדוגמה:
+const advantages = document.getElementById("advantages");
+const iconsText = document.querySelectorAll("#advantages > div");
+
+// מציבים את הצופה על ה־advantages הגדול
+observer.observe(advantages);
+
+// מציבים את הצופה על כל האייקונים
+iconsText.forEach(icon => {
+  observer.observe(icon);
+});
