@@ -748,6 +748,7 @@ ul {
   60% {
     opacity: 1;
   }
+
   80% {
     opacity: 0;
   }
@@ -756,3 +757,16 @@ ul {
   }
 }
 
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+    direction: ltr; /* This makes the scrollbar appear on the right */
+    writing-mode: horizontal-tb; /* Ensures scrollbar stays vertical */
+    border: rgb(216, 215, 215) solid 1px;
+}
+
+.scrollable-content {
+    direction: rtl; /* This keeps the text aligned for Hebrew */
+    unicode-bidi: plaintext; /* Ensures nested text follows RTL */
+    padding: 20px;
+}
