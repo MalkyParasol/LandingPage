@@ -343,8 +343,9 @@ align-items: flex-start;  */
   /* כתיבה מלמעלה למטה */
   transform: rotate(180deg);
   position: absolute;
-  top: 110px;
-  right: 60px;
+  /* top: 70px; */
+  right: 50px;
+  bottom: 30px;
   font-family: 'Playpen Sans Hebrew', sans-serif;
   text-align: left;
   /* font-style: italic; */
@@ -731,31 +732,42 @@ ul {
 }
 
 .fade-in {
-  animation: fadeInOutAnimation 12s ease-in-out forwards;
-  /* animation-iteration-count: 2; חזרה 3 פעמים */
+  animation: fadeInOutAnimation 3s ease-in-out forwards;
 }
 
+/* אנימציית fadeInOutAnimation */
 @keyframes fadeInOutAnimation {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 0;
-  }
   100% {
-    opacity: 1;  /* סיום באנימציה עם גלוי */
+    opacity: 1;
   }
 }
+
+/* עיכובים לאייקונים שמכילים את הקלאס fade-in */
+#advantages > div.fade-in:nth-child(1) {
+  animation-delay: 0s;
+}
+#advantages > div.fade-in:nth-child(2) {
+  animation-delay: 1s;
+}
+#advantages > div.fade-in:nth-child(3) {
+  animation-delay: 2s;
+}
+#advantages > div.fade-in:nth-child(4) {
+  animation-delay: 3s;
+}
+#advantages > div.fade-in:nth-child(5) {
+  animation-delay: 4s;
+}
+#advantages > div.fade-in:nth-child(6) {
+  animation-delay: 5s;
+}
+#advantages > div.fade-in:nth-child(7) {
+  animation-delay: 6s;
+}
+
 
 .scrollable-list {
     max-height: 300px;

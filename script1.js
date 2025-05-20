@@ -83,36 +83,25 @@ const buttons = document.querySelectorAll(".circle-button");
   });
   
 /*אנימציה איקונים*/
-const observer = new IntersectionObserver((entries, observer) => {
+
+
+const advantages = document.getElementById("advantages");
+const icons = advantages.querySelectorAll("div");
+
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.target.id === "advantages") {
-      if (entry.isIntersecting) {
-        // כשה-dive נכנס לתצוגה, מוסיפים את האנימציה
-        entry.target.classList.add("fade-in");
-      } else {
-        // כשה-dive יוצא מהתצוגה, מסירים את האנימציה כדי להסתיר
-        entry.target.classList.remove("fade-in");
-      }
+    if (entry.isIntersecting) {
+      // כשה advantages נראה במסך - הוסף את הקלאס fade-in לכל הילדים
+      icons.forEach(icon => {
+        icon.classList.add("fade-in");
+      });
     } else {
-      // לכל האייקונים (שלא #advantages)
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target); // לא רוצים להסתכל עליהם יותר
-      }
+      // כשהוא לא נראה - הסר את הקלאס כדי להסתיר שוב
+      icons.forEach(icon => {
+        icon.classList.remove("fade-in");
+      });
     }
   });
-}, {
-  threshold: 0.1
-});
+}, { threshold: 0.1 });
 
-// מניח ש advantages מוגדר, לדוגמה:
-const advantages = document.getElementById("advantages");
-const iconsText = document.querySelectorAll("#advantages > div");
-
-// מציבים את הצופה על ה־advantages הגדול
 observer.observe(advantages);
-
-// מציבים את הצופה על כל האייקונים
-iconsText.forEach(icon => {
-  observer.observe(icon);
-});
