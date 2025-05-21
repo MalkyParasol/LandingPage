@@ -710,7 +710,7 @@ ul {
 
 #questions {
   display: flex;
-  gap: 50px;
+  gap: 80px;
   /* width: 100vw; */
 }
 
