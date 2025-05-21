@@ -22,6 +22,12 @@ body {
   /* font-size: larger; */
   overflow-x: hidden !important;
 }
+#quoteText{
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.recomText{
+  font-size: clamp(1rem, 3vw, 2rem);
+}
 
 h1 {
   text-align: center;
@@ -112,10 +118,24 @@ p {
 }
 
 #header {
+  /* height: 300px; */
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
+/* #rotating-headers{
+  display: none;
+}
+#static-header{
+  display: none;
+} */
+/* .rotating-header {
+  display: none;
+} */
+
+/* .rotating-header:first-child {
+  display: block;
+} */
 
 #rotating-headers {
   position: relative;
@@ -150,6 +170,9 @@ p {
   #static-header h1 {
     font-size: clamp(2.2rem, 5.5vw, 5rem);
   }
+  #recommendation2{
+    width: 700px !important;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 911px) {
@@ -160,11 +183,16 @@ p {
   #advantages>div {
     width: 50px !important;
     /* <<< השורה החשובה */
+
   }
+
 
   /* #static-header h1 {
     font-size: clamp(1.8rem, 5vw, 4rem);
   } */
+   #recommendation2{
+    width: 600px !important;
+  }
 }
 
 @media (max-width: 911px) and (min-width:405px) {
@@ -178,6 +206,10 @@ p {
   #advantages>div {
     width: 50px !important;
     /* <<< השורה החשובה */
+  }
+
+    #recommendation2{
+    width: 120px !important;
   }
 
 }
@@ -198,6 +230,9 @@ p {
   #advantages>div {
     width: 50px !important;
     /* <<< השורה החשובה */
+  }
+  #recommendation2{
+    width: 60px !important;
   }
 
 
@@ -220,6 +255,9 @@ p {
     width: 50px !important;
     /* <<< השורה החשובה */
   }
+    #recommendation2{
+    width: 60px !important;
+  }
 
 }
 
@@ -239,6 +277,9 @@ p {
   #advantages>div {
     width: 50px !important;
     /* <<< השורה החשובה */
+  }
+    #recommendation2{
+    width: 60px !important;
   }
 
 }
@@ -781,4 +822,7 @@ ul {
     direction: rtl; /* This keeps the text aligned for Hebrew */
     unicode-bidi: plaintext; /* Ensures nested text follows RTL */
     padding: 20px;
+}
+.menu-item_end{
+  margin: 8px;
 }
