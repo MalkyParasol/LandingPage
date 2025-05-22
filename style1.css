@@ -160,7 +160,10 @@ p {
   position: relative;
   z-index: 1;
 }
-
+.signForTinyScreen{
+  display: none;
+  /* hide for larger screens */
+}
 @media (min-width: 1024px) and (max-width: 1496px) {
   #rotating-headers h2 {
     font-size: clamp(1.2rem, 3.5vw, 2rem);
@@ -204,13 +207,25 @@ p {
     font-size: clamp(2rem, 5.5vw, 4.5rem);
   }
   #advantages>div {
-    width: 50px !important;
+    width: 45px !important;
     /* <<< השורה החשובה */
   }
-
-    #recommendation2{
-    width: 120px !important;
+  .author{
+    display: none;
   }
+  #recommendation2{
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+  .signForTinyScreen{
+    display: block;
+    font-family: 'Playpen Sans Hebrew', sans-serif;
+    font-size: 20px;
+  }
+
+    /* #recommendation2{
+    width: 120px !important;
+  } */
 
 }
 
@@ -231,9 +246,23 @@ p {
     width: 50px !important;
     /* <<< השורה החשובה */
   }
-  #recommendation2{
+  /* #recommendation2{
     width: 60px !important;
+  } */
+
+   .author{
+    display: none;
   }
+  #recommendation2{
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+  .signForTinyScreen{
+    display: block;
+    font-family: 'Playpen Sans Hebrew', sans-serif;
+    font-size: 15px;
+  }
+
 
 
 }
@@ -255,8 +284,21 @@ p {
     width: 50px !important;
     /* <<< השורה החשובה */
   }
-    #recommendation2{
+    /* #recommendation2{
     width: 60px !important;
+  } */
+   
+   .author{
+    display: none;
+  }
+  #recommendation2{
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+  .signForTinyScreen{
+    display: block;
+    font-family: 'Playpen Sans Hebrew', sans-serif;
+    font-size: 15px;
   }
 
 }
@@ -278,9 +320,23 @@ p {
     width: 50px !important;
     /* <<< השורה החשובה */
   }
-    #recommendation2{
-    width: 60px !important;
+
+  
+   .author{
+    display: none;
   }
+  #recommendation2{
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+  }
+  .signForTinyScreen{
+    display: block;
+    font-family: 'Playpen Sans Hebrew', sans-serif;
+    font-size: 15px;
+  }
+    /* #recommendation2{
+    width: 60px !important;
+  } */
 
 }
 
