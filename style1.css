@@ -898,3 +898,6 @@ th,td{
 .menu-item_end{
   margin: 8px;
 }
+#header{
+  height: 280px;
+}
