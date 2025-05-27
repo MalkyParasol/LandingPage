@@ -176,6 +176,9 @@ p {
   #recommendation2{
     width: 700px !important;
   }
+  #header{
+  height: 200px !important;
+}
 }
 
 @media (max-width: 1024px) and (min-width: 911px) {
@@ -195,6 +198,20 @@ p {
   } */
    #recommendation2{
     width: 600px !important;
+  }
+
+    #header{
+  height: 150px !important;
+}
+}
+@media (max-width:911px) and (min-width:610px){
+ #header{
+  height: 120px !important;
+  }
+}
+@media (max-width:610px) and (min-width:405px){
+ #header{
+  height: 100px !important;
   }
 }
 
@@ -262,7 +279,9 @@ p {
     font-family: 'Playpen Sans Hebrew', sans-serif;
     font-size: 15px;
   }
-
+ #header{
+  height: 70px !important;
+  }
 
 
 }
@@ -300,6 +319,9 @@ p {
     font-family: 'Playpen Sans Hebrew', sans-serif;
     font-size: 15px;
   }
+   #header{
+  height: 50px !important;
+  }
 
 }
 
@@ -333,6 +355,9 @@ p {
     display: block;
     font-family: 'Playpen Sans Hebrew', sans-serif;
     font-size: 15px;
+  }
+     #header{
+  height: 30px !important;
   }
     /* #recommendation2{
     width: 60px !important;
